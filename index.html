@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Online & Carrito</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <section class="tienda-section">
+            <h2>Catálogo de Productos</h2>
+            
+            <div class="buscador">
+                <input type="text" id="inputFiltro" placeholder="Buscar producto por nombre...">
+            </div>
+
+            <div id="lista-productos" class="grid-productos"></div>
+        </section>
+
+        <section id="comprobante" class="carrito-section">
+            <div class="encabezado-recibo">
+                <h2>Comprobante de Compra</h2>
+                <p id="fecha-comprobante"></p>
+            </div>
+            
+            <hr class="linea-recibo">
+
+            <div class="cuerpo-recibo">
+                <ul id="lista-carrito">
+                    </ul>
+            </div>
+
+            <hr class="linea-recibo">
+
+            <div class="total-recibo">
+                <span>Total a Pagar:</span>
+                <span id="total-precio">Gs. 0</span>
+            </div>
+
+            <div class="controles-carrito">
+                <button id="btn-vaciar" onclick="vaciarCarrito()">Vaciar Carrito</button>
+                <button id="btn-pdf" onclick="generarComprobantePDF()">Imprimir Comprobante</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
